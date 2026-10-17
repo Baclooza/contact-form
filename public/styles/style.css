@@ -1,5 +1,5 @@
 /* Import from Google Fonts */
-@import url('https://googleapis.com');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root {
     --primary: #a23bec;
@@ -10,8 +10,15 @@
 body {
     background-color: var(--primary);
     font-family: 'Press Start 2P', monospace;
-    font-size: 1rem;
+    font-size: .8rem;
     line-height: 1.5;
+    padding: .5rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
 }
 
 /* Main */
@@ -21,7 +28,30 @@ body {
     max-width: 900px;
     margin: 0 auto;
     border-radius: 25px;
+    padding: 1rem;
 }
 
 /* Title */
+h1{
+    text-align: center;
+}
 
+/* Contact-info */
+#contact-info{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+input, select{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Meeting question */
+#question{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
