@@ -1,0 +1,27 @@
+/* Import from Google Fonts */
+@import url('https://googleapis.com');
+
+:root {
+    --primary: #a23bec;
+    --secondary: white;
+}
+
+/* General Changes */
+body {
+    background-color: var(--primary);
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Main */
+#main{
+    background-color: var(--secondary);
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 25px;
+}
+
+/* Title */
+
