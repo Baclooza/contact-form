@@ -50,7 +50,7 @@
              <div id="question">
                 <div class="field">
                     <label for="meet-question">How did we meet?</label>
-                    <select id="meet-question">
+                    <select id="meet-question" name="meet-question">
                         <option value="none">Please select an option</option>
                         <option value="event">At an event</option>
                         <option value="linkedin">Linkedin</option>
@@ -69,17 +69,26 @@
              <div id="message-section">
                 <div class="field">
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="4"></textarea>
-                </div>
-
-                <div>
-                    <input type="checkbox" id="mailing-list" name="mailing-list">
-                    <label for="mailing-list">Please add me to your mailing list</label>
+                    <textarea id="message" name="message" rows="6"></textarea>
                 </div>
              </div>
+             <input type="checkbox" id="mailing-list" name="mailing-list">
+             <label for="mailing-list">Please add me to your mailing list</label>
+
+
+            <!-- Email Format -->
+             <fieldset id="email-format">
+                <legend>Choose an email format:</legend>
+    
+                <input type="radio" id="format-html" name="email-format" value="html" checked>
+                <label for="format-html">HTML</label>
+    
+                <input type="radio" id="format-text" name="email-format" value="text">
+                <label for="format-text">Text</label>
+             </fieldset>
 
              
-            <button type="submit">Submit</button>
+            <button id="submit" type="submit">Submit</button>
         </form>
 
     </div>
