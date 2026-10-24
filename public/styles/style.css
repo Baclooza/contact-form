@@ -1,79 +1,89 @@
 :root {
-    --primary: lightgray;
-    --secondary: white;
+  --primary: lightgray;
+  --secondary: white;
 }
 
 /* General Changes */
 body {
-    background-color: var(--primary);
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 1rem;
-    line-height: 1.5;
-    padding: .5rem;
+  background-color: var(--primary);
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0.5rem;
 }
 
 .field input,
 .field select,
 .field textarea {
-    width: 100%;
-    box-sizing: border-box;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.err {
+  display: none;
+  color: red;
+}
+
+#other,
+#email-format {
+  display: none;
 }
 
 /* Main */
-#main{
-    background-color: var(--secondary);
-    width: 90%;
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 1rem;
-    border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+#main {
+  background-color: var(--secondary);
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Title */
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }
 
 /* Contact-info */
-#contact-info{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+#contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
 /* Meeting question */
-#question{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin-top: 1.5rem;
+#question {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 /* Message */
-#message-section{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+#message-section {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* Email Format */
 #email-format {
-    border: none;
-    padding: 0;
-    margin-top: .5rem;
+  border: none;
+  padding: 0;
+  margin-top: 0.5rem;
 }
 
 #email-format legend {
-    float: left;
-    margin-right: 0.5rem;
+  float: left;
+  margin-right: 0.5rem;
 }
 
 /* Submit Button */
-#submit{
-    background-color: rgb(54, 139, 54);
-    color: var(--secondary);
-    border-radius: 5px;
-    width: 5rem;
-    height: 2rem;
+#submit {
+  background-color: rgb(54, 139, 54);
+  color: var(--secondary);
+  border-radius: 5px;
+  width: 5rem;
+  height: 2rem;
 }

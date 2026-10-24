@@ -1,96 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="scripts/contact.js" defer></script>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" type="image/png" href="images/favicon.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/scripts/contact.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <title>Contact Form</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="main">
-        <h1>Contact Form</h1>
+      <h1>Contact Form</h1>
 
-        <form id="main-form" action="#" method="get">
-            <!-- Contact info -->
-             <div id="contact-info">
-                 <div class="field">
-                     <label for="first-name">First Name</label>
-                     <input type="text" id="first-name" name="first-name">
-                 </div>
- 
-                 <div class="field">
-                     <label for="last-name">Last Name</label>
-                     <input type="text" id="last-name" name="last-name">
-                 </div>
+      <form id="main-form" action="#" method="post">
+        <!-- Contact info -->
+        <div id="contact-info">
+          <div class="field">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" />
+            <span class="err" id="err-fname"
+              >Please enter your first name.</span
+            >
+          </div>
 
-                 <div class="field">
-                     <label for="job-title">Job Title</label>
-                     <input type="text" id="job-title" name="job-title">
-                 </div>
- 
-                 <div class="field">
-                     <label for="company">Company</label>
-                     <input type="text" id="company" name="company">
-                 </div>
-                 
-                 <div class="field">
-                     <label for="linkedin-url">Linkedin URL</label>
-                     <input type="url" id="linkedin-url" name="linkedin-url">
-                 </div>
- 
-                 <div class="field">
-                     <label for="email">Email Address</label>
-                     <input type="email" id="email" name="email">
-                 </div>
-             </div>
+          <div class="field">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" />
+            <span class="err" id="err-lname">Please enter your last name.</span>
+          </div>
 
-            <!-- How did we meet section -->
-             <div id="question">
-                <div class="field">
-                    <label for="meet-question">How did we meet?</label>
-                    <select id="meet-question" name="meet-question">
-                        <option value="none">Please select an option</option>
-                        <option value="event">At an event</option>
-                        <option value="linkedin">Linkedin</option>
-                        <option value="referral">Referral</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
+          <div class="field">
+            <label for="job-title">Job Title</label>
+            <input type="text" id="job-title" name="job-title" />
+          </div>
 
-                <div class="field">
-                    <label for="other">Other (please specify)</label>
-                    <input type="text" id="other" name="other">
-                </div>                
-             </div>
+          <div class="field">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" />
+          </div>
 
-            <!-- Message section -->
-             <div id="message-section">
-                <div class="field">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="6"></textarea>
-                </div>
-             </div>
-             <input type="checkbox" id="mailing-list" name="mailing-list">
-             <label for="mailing-list">Please add me to your mailing list</label>
+          <div class="field">
+            <label for="linkedin-url">Linkedin URL</label>
+            <input type="url" id="linkedin-url" name="linkedin-url" />
+            <span class="err" id="err-linkedin"
+              >Please enter a valid Linkedin address.</span
+            >
+          </div>
 
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" />
+            <span class="err" id="err-email"
+              >Please enter an email address.</span
+            >
+          </div>
+        </div>
 
-            <!-- Email Format -->
-             <fieldset id="email-format">
-                <legend>Choose an email format:</legend>
-    
-                <input type="radio" id="format-html" name="email-format" value="html" checked>
-                <label for="format-html">HTML</label>
-    
-                <input type="radio" id="format-text" name="email-format" value="text">
-                <label for="format-text">Text</label>
-             </fieldset>
+        <!-- How did we meet section -->
+        <div id="question">
+          <div class="field">
+            <label for="meet-question">How did we meet?</label>
+            <select id="meet-question" name="meet-question">
+              <option value="none">Please select an option</option>
+              <option value="event">At an event</option>
+              <option value="linkedin">Linkedin</option>
+              <option value="referral">Referral</option>
+              <option value="other">Other</option>
+            </select>
+            <span class="err" id="err-meet">Please state how we met.</span>
+          </div>
 
-             
-            <button id="submit" type="submit">Submit</button>
-        </form>
+          <div class="field" id="other">
+            <label for="other-text">Other (please specify)</label>
+            <input type="text" id="other-text" name="other" />
+          </div>
+        </div>
 
+        <!-- Message section -->
+        <div id="message-section">
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6"></textarea>
+          </div>
+        </div>
+        <div id="field">
+          <input type="checkbox" id="mailing-list" name="mailing-list" />
+          <label for="mailing-list">Please add me to your mailing list</label>
+        </div>
+
+        <!-- Email Format -->
+        <fieldset id="email-format">
+          <legend>Choose an email format:</legend>
+
+          <input
+            type="radio"
+            id="format-html"
+            name="email-format"
+            value="html"
+            checked
+          />
+          <label for="format-html">HTML</label>
+
+          <input
+            type="radio"
+            id="format-text"
+            name="email-format"
+            value="text"
+          />
+          <label for="format-text">Text</label>
+        </fieldset>
+
+        <button type="submit" id="submit">Submit</button>
+      </form>
     </div>
-</body>
+  </body>
 </html>
