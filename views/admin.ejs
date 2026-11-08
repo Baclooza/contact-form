@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('partials/head', {title: 'Admin'}) %>
+  <!-- Add data table resources -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://cdn.datatables.net/3.1.4/js/dataTables.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/3.1.4/css/dataTables.dataTables.min.css">
+</head>
+
+<body>
+  <div id="main">
+    <h1>Contacts</h1>
+    <table id="contact-table" class="display">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Job Title</th>
+          <th>Company</th>
+          <th>How We Met</th>
+          <th>Message</th>
+          <th>Date and Time</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% contacts.forEach(contact => { %>
+        <tr>
+          <td><%= contact.fname %> <%= contact.lname %></td>
+          <td><%= contact.email || 'N/A' %></td>
+          <td><%= contact['job-title'] || 'N/A' %></td>
+          <td><%= contact.company || 'N/A' %></td>
+          <td>
+            <% if (contact['meet-question'] === 'other') { %>
+            <%= contact.other || 'Not specified' %>
+            <% } else { %>
+            <%= contact['meet-question'] %>
+            <% } %>
+          </td>
+          <td><%= contact.message || 'None' %></td>
+          <td><%= contact.timestamp ? contact.timestamp.toLocaleString() : 'N/A' %></td>
+        </tr>
+        <% }); %>
+      </tbody>
+
+    </table>
+    <a href="/" id="back-button">Go Back</a>
+  </div>
+  <script>
+    new DataTable('#contact-table');
+  </script>
+</body>
+
+</html>

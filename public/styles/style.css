@@ -1,6 +1,7 @@
 :root {
   --primary: lightgray;
   --secondary: white;
+  --buttonColor: rgb(54, 139, 54);
 }
 
 /* General Changes */
@@ -11,6 +12,13 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   padding: 0.5rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 .field input,
@@ -79,11 +87,25 @@ h1 {
   margin-right: 0.5rem;
 }
 
-/* Submit Button */
-#submit {
-  background-color: rgb(54, 139, 54);
+/* Buttons */
+#submit,
+#back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--buttonColor);
   color: var(--secondary);
   border-radius: 5px;
-  width: 5rem;
+  padding: 0 1.2rem;
   height: 2rem;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Footer */
+footer {
+  padding: 1rem;
 }
